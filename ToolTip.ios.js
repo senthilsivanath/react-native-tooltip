@@ -3,6 +3,7 @@
 var {
   requireNativeComponent,
   TouchableHighlight,
+  TouchableOpacity,
   View,
   NativeModules,
   findNodeHandle,
@@ -75,13 +76,13 @@ var ViewClass = React.createClass({
   render: function() {
     return (
       <RCTToolTipText ref='toolTipText' onChange={this.handleToolTipTextChange}>
-        <TouchableHighlight
+        <TouchableOpacity
           {...this.getTouchableHighlightProps()}
         >
           <View>
             {this.props.children}
           </View>
-        </TouchableHighlight>
+        </TouchableOpacity>
       </RCTToolTipText>
     );
   }
